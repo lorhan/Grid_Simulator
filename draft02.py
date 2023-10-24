@@ -99,3 +99,27 @@ plt.plot(li_t_lims, li_test, label = "lims", color = "k")
 plt.legend()
 plt.grid()
 
+#%%
+
+
+def write_pwl_file(fsamp_pwl, ar_amp, output_file, n_repeat):
+    tsamp_pwl = 1/fsamp_pwl
+
+    str_pwl = ""
+    cnt = 0
+    for k in range(n_repeat):
+        for n in range(len(ar_amp)):
+            t = cnt*tsamp_pwl
+            cnt+=1
+            str_pwl += f"{t} {ar_amp[n]}\n"
+
+    with open(output_file,"w") as f:
+        f.write(str_pwl)
+
+
+
+
+write_pwl_file(fsamp_pwl, li_pwl_amp1, "ignored_folder/vpwl1.txt", 100)
+write_pwl_file(fsamp_pwl, li_pwl_amp2, "ignored_folder/vpwl2.txt", 100)
+
+# %%
