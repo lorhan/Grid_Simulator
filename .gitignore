@@ -4,3 +4,4 @@ ignored_folder/*
 *.plt
 *.raw
 *.net
+*.fft
