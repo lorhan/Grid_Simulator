@@ -5,3 +5,6 @@ ignored_folder/*
 *.raw
 *.net
 *.fft
+*.sch
+*.qraw
+
